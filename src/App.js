@@ -26,10 +26,7 @@ const particlesOptions = {
                 }
               }
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
+const initialState = {
       input: '',
       imageUrl: '',
       box: {},
@@ -41,8 +38,13 @@ class App extends Component {
         email: '',
         entries: 0,
         joined: ''
-      }
     }
+}
+
+class App extends Component {
+  constructor() {
+    super();
+    this.state = initialState;
   }
 
   loadUser = (data) => {
